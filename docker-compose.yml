@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  test-project-db:
+    restart: always
+    image: postgres:14
+    ports:
+      - "5433:5432"
+    expose:
+      - "5432"
+    user: postgres
+    env_file:
+      - .env
